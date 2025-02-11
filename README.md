@@ -86,6 +86,7 @@ Volatility clustering refers to periods of high or low volatility, which are com
   $$
   TR_t = \max(H_t - L_t, |H_t - C_{t-1}|, |L_t - C_{t-1}|)
   $$
+  
   Where \( H_t \), \( L_t \), and \( C_{t-1} \) are the high, low, and close prices, respectively.
   
 - **Average True Range (ATR)** is then computed over a rolling window to capture volatility.
@@ -98,9 +99,9 @@ $$
 $$
 
 Where:
-- \(\sigma_t^2\) is the conditional variance,
-- \(\epsilon_{t-1}\) is the lagged residual error, and
-- \(\sigma_{t-1}^2\) is the previous period's variance.
+- $\sigma_t^2$ is the conditional variance,
+- $\epsilon_{t-1}$ is the lagged residual error, and
+- $\sigma_{t-1}^2$ is the previous period's variance.
 
 ### Strategy
 This project uses two strategies: **Momentum** and **Contrarian**, with separate rules for high and normal volatility periods.
