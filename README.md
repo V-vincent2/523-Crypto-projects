@@ -16,8 +16,7 @@ A research and trading strategy project extending [Caporale & Plastun (2020)](ht
    - [Trading Strategies](#trading-strategies)
 4. [Results & Findings](#results--findings)
 5. [Conclusion & Future Work](#conclusion--future-work)
-6. [How to Run](#how-to-run)
-7. [References](#references)
+6. [References](#references)
 
 ---
 
@@ -57,7 +56,7 @@ btc_df['close'] = btc_df['close'].interpolate(method='time')
 
 ## Methodology
 
-### Abnormal Returns
+### Hourly abnormal returns
 The abnormal returns are calculated using a **moving average** and **standard deviation** over a rolling window. The calculation is as follows:
 
 - **Mean and Standard Deviation for Rolling Window**:
