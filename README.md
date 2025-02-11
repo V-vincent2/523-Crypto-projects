@@ -60,18 +60,18 @@ btc_df['close'] = btc_df['close'].interpolate(method='time')
 The abnormal returns are calculated using a **moving average** and **standard deviation** over a rolling window. The calculation is as follows:
 
 - **Mean and Standard Deviation for Rolling Window**:
-  ```
-  \[
+  
+  $$
   \mu_t = \frac{1}{n} \sum_{i=t-n+1}^{t} R_i
-  \]
-  \[
+  $$
+  $$
   \sigma_t = \sqrt{\frac{1}{n-1} \sum_{i=t-n+1}^{t} (R_i - \mu_t)^2}
-  \]
-  ```
+  $$
+  
 - **Threshold for Abnormal Returns**:
-  \[
+  $$
   \text{Threshold}_t = \mu_t + k \cdot \sigma_t \cdot \sqrt{\text{lookback}}
-  \]
+  $$
 
 Where `k` is a scaling factor used to identify extreme price movements.
 
@@ -80,18 +80,18 @@ Volatility clustering refers to periods of high or low volatility, which are com
 
 #### ATR Method
 - **True Range (TR)** is defined as the maximum of:
-  \[
+  $$
   TR_t = \max(H_t - L_t, |H_t - C_{t-1}|, |L_t - C_{t-1}|)
-  \]
+  $$
   Where \( H_t \), \( L_t \), and \( C_{t-1} \) are the high, low, and close prices, respectively.
   
 - **Average True Range (ATR)** is then computed over a rolling window to capture volatility.
 
 #### GARCH Model
 A **GARCH(1,1)** model is fit on the hourly returns to estimate conditional volatility:
-\[
+$$
 \sigma_t^2 = \omega + \alpha \cdot \epsilon_{t-1}^2 + \beta \cdot \sigma_{t-1}^2
-\]
+$$
 Where:
 - \(\sigma_t^2\) is the conditional variance,
 - \(\epsilon_{t-1}\) is the lagged residual error, and
