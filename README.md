@@ -71,9 +71,7 @@ The abnormal returns are calculated using a **moving average** and **standard de
   
 - **Threshold for Abnormal Returns**:
   
-  $$
-  \text{Threshold}_t = \mu_t + k \cdot \sigma_t \cdot \sqrt{\text{lookback}}
-  $$
+  $$\text{Threshold}_t = \mu_t + k \cdot \sigma_t \cdot \sqrt{\text{lookback}}$$
 
 Where `k` is a scaling factor used to identify extreme price movements.
 
@@ -83,11 +81,9 @@ Volatility clustering refers to periods of high or low volatility, which are com
 #### ATR Method
 - **True Range (TR)** is defined as the maximum of:
   
-  $$
-  TR_t = \max(H_t - L_t, |H_t - C_{t-1}|, |L_t - C_{t-1}|)
-  $$
+  $$TR_t = \max(H_t - L_t, |H_t - C_{t-1}|, |L_t - C_{t-1}|)$$
   
-  Where $ H_t $, $ L_t $, and $ C_{t-1} $ are the high, low, and close prices, respectively.
+  Where $H_t$, $L_t$, and $C_{t-1}$ are the high, low, and close prices, respectively.
   
 - **Average True Range (ATR)** is then computed over a rolling window to capture volatility.
 
