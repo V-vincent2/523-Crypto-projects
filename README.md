@@ -64,11 +64,13 @@ The abnormal returns are calculated using a **moving average** and **standard de
   $$
   \mu_t = \frac{1}{n} \sum_{i=t-n+1}^{t} R_i
   $$
+  
   $$
   \sigma_t = \sqrt{\frac{1}{n-1} \sum_{i=t-n+1}^{t} (R_i - \mu_t)^2}
   $$
   
 - **Threshold for Abnormal Returns**:
+  
   $$
   \text{Threshold}_t = \mu_t + k \cdot \sigma_t \cdot \sqrt{\text{lookback}}
   $$
@@ -80,6 +82,7 @@ Volatility clustering refers to periods of high or low volatility, which are com
 
 #### ATR Method
 - **True Range (TR)** is defined as the maximum of:
+  
   $$
   TR_t = \max(H_t - L_t, |H_t - C_{t-1}|, |L_t - C_{t-1}|)
   $$
@@ -89,9 +92,11 @@ Volatility clustering refers to periods of high or low volatility, which are com
 
 #### GARCH Model
 A **GARCH(1,1)** model is fit on the hourly returns to estimate conditional volatility:
+
 $$
 \sigma_t^2 = \omega + \alpha \cdot \epsilon_{t-1}^2 + \beta \cdot \sigma_{t-1}^2
 $$
+
 Where:
 - \(\sigma_t^2\) is the conditional variance,
 - \(\epsilon_{t-1}\) is the lagged residual error, and
