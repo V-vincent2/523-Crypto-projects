@@ -61,13 +61,9 @@ The abnormal returns are calculated using a **moving average** and **standard de
 
 - **Mean and Standard Deviation for Rolling Window**:
   
-  $$
-  \mu_t = \frac{1}{n} \sum_{i=t-n+1}^{t} R_i
-  $$
+  $$\mu_t = \frac{1}{n} \sum_{i=t-n+1}^{t} R_i$$
   
-  $$
-  \sigma_t = \sqrt{\frac{1}{n-1} \sum_{i=t-n+1}^{t} (R_i - \mu_t)^2}
-  $$
+  $$\sigma_t = \sqrt{\frac{1}{n-1} \sum_{i=t-n+1}^{t} (R_i - \mu_t)^2}$$
   
 - **Threshold for Abnormal Returns**:
   
