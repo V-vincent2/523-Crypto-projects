@@ -49,6 +49,7 @@ btc_df['close'] = btc_df['close'].interpolate(method='time')
 
 ```
 
+<img width="912" alt="image" src="https://github.com/user-attachments/assets/40a4e50c-946f-4f1c-bf9f-849b043c7e6a" />
 
 
 
@@ -71,6 +72,9 @@ The abnormal returns are calculated using a **moving average** and **standard de
 
 Where `k` is a scaling factor used to identify extreme price movements.
 
+<img width="912" alt="image" src="https://github.com/user-attachments/assets/ddedb890-a513-4c00-9ca5-1a3713dce732" />
+
+
 ### Volatility Clustering
 Volatility clustering refers to periods of high or low volatility, which are common in cryptocurrencies. The project uses **ATR (Average True Range)** and **GARCH(1,1)** models to measure volatility and classify high-volatility periods.
 
@@ -83,6 +87,9 @@ Volatility clustering refers to periods of high or low volatility, which are com
   
 - **Average True Range (ATR)** is then computed over a rolling window to capture volatility.
 
+<img width="912" alt="image" src="https://github.com/user-attachments/assets/904c8ad8-4cde-4b50-ab70-8916b1ae22f1" />
+
+
 #### GARCH Model
 A **GARCH(1,1)** model is fit on the hourly returns to estimate conditional volatility:
 
@@ -94,6 +101,9 @@ Where:
 - $\sigma_t^2$ is the conditional variance,
 - $\epsilon_{t-1}$ is the lagged residual error, and
 - $\sigma_{t-1}^2$ is the previous period's variance.
+
+
+<img width="912" alt="image" src="https://github.com/user-attachments/assets/188a326e-8402-4f55-9212-74d2f9379561" />
 
 ### Strategy
 This project uses two strategies: **Momentum** and **Contrarian**, with separate rules for high and normal volatility periods.
